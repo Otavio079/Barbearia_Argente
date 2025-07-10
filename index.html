@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Barbearia - Agendamento</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Agende seu Horário</h1>
+    <form id="agendamentoForm" action="https://api.sheetmonkey.io/form/uZq9mpJQaNsoTangyb2kJs" method="post">
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" name="nome" required>
+
+      <label for="telefone">Telefone:</label>
+      <input type="text" id="telefone" name="telefone" required>
+
+      <label for="servico">Serviço:</label>
+      <select id="servico" name="servico" required>
+        <option value="Corte de cabelo">Corte de cabelo</option>
+        <option value="Barba">Barba</option>
+        <option value="Corte + Barba">Cabelo + Barba</option>
+        <option value="sobrancelha">Sobrancelha</option>
+        <option value="limpeza de pele">Limpeza de pele</option>
+        <option value="Hidratação">Hidratação</option>
+        <option value="Selagem">Selagem</option>
+        <option value="Depilação no nariz ou orelha">Depilação no nariz ou orelha</option>
+        <option value="Acabamento">Acabamento</option>
+
+      </select>
+
+      <label for="data">Data:</label>
+      <input type="date" id="data" name="data" required>
+
+      <label for="hora">Hora:</label>
+      <select id="hora" name="hora" required></select>
+
+      <button type="submit">
+       Agendar
+      </button>
+    </form>
+    <p id="mensagem"></p>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
